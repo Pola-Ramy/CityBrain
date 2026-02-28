@@ -7,6 +7,7 @@ const userSchema = new mongoose.Schema({
 
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true, minlength: 6 },
+    role: { type: String, enum: ['admin', 'AI'], default: 'admin', required: true },
 
     // New fields for reset password
     resetToken: String,

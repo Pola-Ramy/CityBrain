@@ -9,7 +9,7 @@ const signup = async (data) => {
         error.status = 400;
         throw error;
     }
-    const user = await userRepo.createUser(data);
+    const user = await userRepo.createUser({ ...data, role: 'admin' });
     return user;
 };
 
