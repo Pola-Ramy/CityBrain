@@ -26,4 +26,5 @@ router.get('/dashboard', protect, (req, res) => {
     });
 });
 
-module.exports = { router, dashboardClients };
+module.exports = router;
+module.exports.dashboardClients = dashboardClients;
